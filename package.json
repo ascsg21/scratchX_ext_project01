@@ -1,0 +1,29 @@
+{
+  "name": "scratchx_ext_project01",
+  "version": "1.0.0",
+  "description": "scratchX Extension Project 01",
+  "main": "ext01.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ascsg21/scratchX_ext_project01.git"
+  },
+  "keywords": [
+    "scratchX"
+  ],
+  "author": "MinRiDaddy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ascsg21/scratchX_ext_project01/issues"
+  },
+  "homepage": "https://github.com/ascsg21/scratchX_ext_project01#readme",
+  "dependencies": {
+    "@google-cloud/vision": "^0.22.1",
+    "express": "^4.16.3"
+  }
+}
