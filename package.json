@@ -24,6 +24,7 @@
   "homepage": "https://github.com/ascsg21/scratchX_ext_project01#readme",
   "dependencies": {
     "@google-cloud/vision": "^0.22.1",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "fs": "0.0.1-security"
   }
 }
