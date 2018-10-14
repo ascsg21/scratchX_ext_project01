@@ -25,25 +25,30 @@ app.all('/*', function(req, res, next) {
 router.route('/naverAPI').post(function(req, res) {
   console.log('/naverAPI 처리함.');
 
+  var str = req.body.str_p || req.query.str_p;
+  console.log("param str : " + str);
+
   var api_url = 'https://openapi.naver.com/v1/papago/n2mt';
   var request = require('request');
   var options = {
        url: api_url,
-       form: {'source':'ko', 'target':'en', 'text':query},
+       form: {'source':'ko', 'target':'en', 'text':str},
        headers: {'X-Naver-Client-Id':client_id, 'X-Naver-Client-Secret': client_secret}
     };
-  console.log('aa');
+  // console.log('aa');
   request.post(options, function (error, response, body) {
      if (!error && response.statusCode == 200) {
-       res.writeHead(200, {'Content-Type': 'text/json;charset=utf-8'});
-       res.end(body);
+       // res.writeHead(200, {'Content-Type': 'text/json;charset=utf-8'});
+       // res.end(body);
+       res.json(body);
        console.log(body);
      } else {
-       res.status(response.statusCode).end();
+       // res.status(response.statusCode).end();
+       res.status(404).json({error: 'Unknown Results'})
        console.log('error = ' + response.statusCode);
      }
    });
-   console.log('bb');
+   // console.log('bb');
   // var paramId = req.body.id || req.query.id;
   // var paramPassword = req.body.password || req.query.password;
 });
