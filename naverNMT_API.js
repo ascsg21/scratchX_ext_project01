@@ -7,8 +7,8 @@ var app = express();
 var router = express.Router();
 
 var str ='';
-var client_id = 'yS5a2J6nsWX8IlsYkBEy';
-var client_secret = 'BpbDCX8R9M';
+var client_id = 'client_id';
+var client_secret = 'client_secret';
 var query = "안녕하세요.";
 
 app.set('port', process.env.PORT || 3000);
