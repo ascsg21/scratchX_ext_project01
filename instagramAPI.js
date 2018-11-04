@@ -11,12 +11,12 @@
 
     ext.getInstagramCount = function(callback) {
       $.ajax({
-          url: 'https://api.instagram.com/v1/users/5962103573', // 요청 할 주소
+          url: 'https://api.instagram.com/v1/users/유저아이디', // 요청 할 주소
           dataType: 'jsonp',
           async: false, // false 일 경우 동기 요청으로 변경
           type: 'GET', // GET, PUT
           data: {
-              access_token: '5962103573.b8b156a.486b029280854504bdded1976661bc58'
+              access_token: 'access_token'
           }, // 전송할 데이터
           // beforeSend: function(data) {callback('aaa');}, // 서버 요청 전 호출 되는 함수 return false; 일 경우 요청 중단
           success: function(data) {
