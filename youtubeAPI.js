@@ -10,7 +10,7 @@
     };
 
     ext.getYouTubeInfo = function(callback) {
-      var yourUrl = 'https://www.googleapis.com/youtube/v3/channels?part=id,snippet,brandingSettings,contentDetails,invideoPromotion,statistics,topicDetails&id=UCWs0WvjYOKdDmpW4At3hSag&key=AIzaSyBTBTglKGvWC9p8NLQfkMInbsk6DEJXz9Q';
+      var yourUrl = 'https://www.googleapis.com/youtube/v3/channels?part=id,snippet,brandingSettings,contentDetails,invideoPromotion,statistics,topicDetails&id=채널id&key=apikey';
       var Httpreq = new XMLHttpRequest();
       try {
           Httpreq.open("GET", yourUrl, false);
